@@ -1,0 +1,34 @@
+.burgerIcon {
+    cursor: pointer;
+    transform: translate3d(0, 0, 0);
+
+    path {
+        fill: none;
+        transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
+            stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
+        stroke-width: 30px;
+        stroke-linecap: round;
+        stroke: currentColor;
+        stroke-dashoffset: 0;
+
+        &:global(#top),
+        &:global(#bottom) {
+            stroke-dasharray: 240px 950px;
+        }
+        &:global(#middle) {
+            stroke-dasharray: 240px 240px;
+        }
+
+        &.cross {
+            &:global(#top),
+            &:global(#bottom) {
+                stroke-dashoffset: -650px;
+            }
+
+            &:global(#middle) {
+                stroke-dashoffset: -115px;
+                stroke-dasharray: 1px 220px;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@mixin header-action-wrapper {
+    cursor: pointer;
+
+    & > :global(.ant-btn) > span[role='img'],
+    :global(.ant-badge) {
+        font-size: 1.625rem;
+
+        @include respond(md) {
+            font-size: 1.25rem;
+        }
+    }
+
+    & :global(.ant-badge) {
+        display: inline-block;
+    }
+}

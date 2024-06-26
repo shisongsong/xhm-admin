@@ -1,0 +1,86 @@
+[data-theme='light'],
+:root {
+    color-scheme: light;
+    --primary-color: #01509A;
+    --primary1-color: #f5f5f5;
+    --primary-gradient-color: linear-gradient(211.49deg, #006CCF 15.89%, #00509A 48.97%);
+    --info-color: var(--primary-color);
+    --secondary-color: #0085FF;
+    --error-color: #FF5252;
+    --warning-color: #FFB155;
+    --success-color: #30AF5B;
+    --background-color: #{_palette(white)};
+    --secondary-background-color: #F8FBFF;
+    // --secondary-background-selected-color: shadeColor(#F8FBFF, -5);
+    --additional-background-color: #ffffff;
+    --collapse-background-color: rgb(0, 108, 207);
+    --timeline-background-color: #F8FBFF;
+    --spinner-base-color: #f42f25;
+    --sider-background-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.07);
+    --border-color: #cce1f4;
+    --border-nft-color: #79819A;
+    --scroll-color: #c5d3e0;
+
+    // --primary-rgb-color: ${hexToRGB(themeObject[theme].primary)};
+    // --info-rgb-color: ${hexToRGB(themeObject[theme].primary)};
+    // --secondary-rgb-color: ${hexToRGB(themeObject[theme].secondary)};
+    // --error-rgb-color: ${hexToRGB(themeObject[theme].error)};
+    // --warning-rgb-color: ${hexToRGB(themeObject[theme].warning)};
+    // --success-rgb-color: ${hexToRGB(themeObject[theme].success)};
+    // --background-rgb-color: ${hexToRGB(themeObject[theme].background)};
+
+    --text-main-color: #404040;
+    --text-light-color: #9A9B9F;
+    --text-superLight-color: #BEC0C6;
+    --text-secondary-color: #{_palette(white)};
+    --text-dark-color: #404040;
+    --text-nft-light-color: #79819A;
+    --text-sider-primary-color: #FFB765;
+    --text-sider-secondary-color: #ffffff;
+    --subtext-color: rgba(0, 0, 0, 0.45);
+
+    --dashboard-map-background-color: #EAF5FF;
+    --dashboard-map-circle-color: #9BC2E7;
+    --dashboard-map-control-disabled-background-color: #c5d3e0;
+
+    --chart-tooltip-label-color: #6A7985;
+    --chart-color1: #01509A;
+    // --chart-rgb-color1: ${hexToRGB(themeObject[theme].chartColor1)};
+    --chart-color1-tint: #2983D8;
+    --chart-color2: #35A0DC;
+    --chart-color2-tint: #67C5FA;
+    --chart-color3: #FFB155;
+    --chart-color3-tint: #FFA800;
+    --chart-color4: #31A652;
+    --chart-color4-tint: #89DCA0;
+    --chart-color5: #FF5252;
+    // --chart-rgb-color5: ${hexToRGB(themeObject[theme].chartColor5)};
+    --chart-color5-tint: #FFC1C1;
+
+    --notification-success-color: #EFFFF4;
+    --notification-primary-color: #D7EBFF;
+    --notification-warning-color: #FFF4E7;
+    --notification-error-color: #FFE2E2;
+
+    --icon-color: #a9a9a9;
+    --icon-hover-color: rgba(0, 0, 0, 0.75);
+    --box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.07);
+    --box-shadow-hover: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    --box-shadow-nft-color: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    --box-shadow-nft-secondary-color: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+
+    --heading-color: #13264d;
+    --item-hover-bg: #f5f5f5;
+    --background-base-color: #F5F5F5;
+    --border-base-color: #bec0c6;
+    --disabled-color: rgba(0, 0, 0, 0.25);
+    --disabled-bg-color: #c5d3e0;
+    --layout-body-bg-color: #f8fbff;
+    --layout-header-bg-color: transparent;
+    --layout-sider-bg-color: linear-gradient(261.31deg, #006ccf -29.57%, #00509a 121.11%);
+    --input-placeholder-color: #404040;
+    --avatar-bg: #cccccc;
+    --alert-text-color: #{_palette(white)};
+    --breadcrumb-color: rgba(0, 0, 0, 0.45);
+}

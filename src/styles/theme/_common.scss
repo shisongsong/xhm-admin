@@ -1,0 +1,15 @@
+:root {
+    color-scheme: light dark;
+    --white: #{_palette(white)};
+    --black: #{_palette(black)};
+    --green: #{_palette(green)};
+    --orange: #{_palette(orange)};
+    --gray: #{_palette(gray)};
+    --lightgrey: #{_palette(lightgrey)};
+    --violet: #{_palette(violet)};
+    --lightgreen: #{_palette(lightgreen)};
+    --pink: #{_palette(pink)};
+    --blue: #{_palette(blue)};
+    --skyblue: #{_palette(skyblue)};
+    --red: #{_palette(red)};
+}

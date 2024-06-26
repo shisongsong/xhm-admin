@@ -1,0 +1,167 @@
+// 再新增一个class siderImportant 是为了能够覆盖默认样式（默认样式只有一个class），增加权重
+.sider.siderImportant {
+    &:global(.ant-layout-sider) {
+        background: var(--layout-sider-bg-color);
+    }
+
+    overflow: visible;
+    z-index: 5;
+    min-height: 100vh;
+    max-height: 100vh;
+    color: var(--text-secondary-color);
+
+    @include respond(xl) {
+        position: fixed;
+        left: 0;
+    }
+
+    @include respond(md) {
+        position: fixed;
+        left: unset;
+        right: 0;
+    }
+
+    .content {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: calc(100vh - _layout(desktop, header-height));
+
+        @include respond(md) {
+            max-height: calc(100vh - _layout(mobile, header-height));
+        }
+    }
+}
+
+.logo {
+    height: _layout(desktop, header-height);
+    padding: _layout(desktop, padding-vertical) _layout(mobile, header-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(md) {
+        height: _layout(mobile, header-height);
+        padding: _layout(mobile, header-padding);
+    }
+
+    &Link {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &Text{
+        margin: 0 1rem;
+        font-weight: 700;
+        font-size: 1.125rem;
+        color: var(--white);
+    }
+
+    .collapseButton {
+        background: var(--collapse-background-color);
+
+        border: 1px solid var(--border-color);
+        transition: all 0.2s ease;
+        position: absolute;
+        right: 0.5rem;
+
+        color: var(--text-secondary-color);
+
+        &:hover,
+        &:focus {
+            color: var(--text-secondary-color);
+            background: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        &.collapsed {
+            right: -1rem;
+        }
+    }
+}
+
+.menuBar {
+    background: transparent;
+    border-inline-end: initial !important;
+
+    a {
+        width: 100%;
+        display: block;
+    }
+
+    :global(.ant-menu-item),
+    :global(.ant-menu-submenu) {
+        font-size: _fontsize(xs);
+    }
+
+    :global(.ant-menu-item-icon) {
+        width: 1.25rem;
+    }
+
+    :global(.ant-menu-submenu-expand-icon),
+    :global(.ant-menu-submenu-arrow),
+    span[role='img'],
+    a,
+    :global(.ant-menu-item),
+    :global(.ant-menu-submenu) {
+        color: var(--text-sider-secondary-color);
+        fill: var(--text-sider-secondary-color);
+    }
+
+    :global(.ant-menu-item-selected) {
+        background-color: transparent !important;
+
+        :global(.ant-menu-submenu-expand-icon),
+        :global(.ant-menu-submenu-arrow),
+        span[role='img'],
+        :global(.ant-menu-item-icon),
+        a {
+            color: var(--text-sider-primary-color);
+            fill: var(--text-sider-primary-color);
+        }
+    }
+
+    :global(.ant-menu-item):hover,
+    :global(.ant-menu-submenu-title):hover {
+        :global(.ant-menu-submenu-expand-icon),
+        :global(.ant-menu-submenu-arrow),
+        span[role='img'],
+        a,
+        :global(.ant-menu-item-icon),
+        :global(.ant-menu-title-content) {
+            color: var(--text-sider-primary-color);
+            fill: var(--text-sider-primary-color);
+        }
+    }
+
+    :global(.ant-menu-submenu-selected) {
+        :global(.ant-menu-submenu-title) {
+            color: var(--text-sider-primary-color);
+
+            :global(.ant-menu-submenu-expand-icon),
+            :global(.ant-menu-submenu-arrow),
+            span[role='img'] {
+                color: var(--text-sider-primary-color);
+                fill: var(--text-sider-primary-color);
+            }
+        }
+    }
+
+    :global(.ant-menu-item-active),
+    :global(.ant-menu-submenu-active) :global(.ant-menu-submenu-title) {
+        background-color: transparent !important;
+    }
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    height: 0;
+
+    &Show {
+        backdrop-filter: blur(6px);
+        width: 100vw;
+        height: 100vh;
+    }
+}

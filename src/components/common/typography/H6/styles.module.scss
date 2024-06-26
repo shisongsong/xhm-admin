@@ -1,0 +1,13 @@
+.h6 {
+    &.ant-typography {
+        font-weight: 500;
+        font-size: 0.875rem;
+        margin-bottom: 0;
+
+        color: var(--text-main-color);
+
+        @include respond(md) {
+            font-size: 0.75rem;
+        }
+    }
+}

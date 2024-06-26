@@ -1,0 +1,20 @@
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    & > a {
+        display: block;
+    }
+
+    @include respond(md) {
+        font-size: 0.875rem;
+    }
+}
+
+.divider {
+    margin: 0;
+}

@@ -1,0 +1,14 @@
+{
+  "common": {
+    "dashboard": "首页",
+    "menu": "菜单",
+    "submenu1": "子菜单 1",
+    "submenu2": "子菜单 2"
+  },
+  "profile": {
+    "title": "个人资料"
+  },
+  "header": {
+    "logout": "登出"
+  }
+}

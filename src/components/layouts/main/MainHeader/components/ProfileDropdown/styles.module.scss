@@ -1,0 +1,10 @@
+.profile {
+    @include header-action-wrapper;
+
+    cursor: pointer;
+
+    @media only screen and (min-width: _breakpoint(md)) {
+        border-radius: 50px;
+        padding: 0.3125rem 0.2rem;
+    }
+}

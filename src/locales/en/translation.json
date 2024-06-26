@@ -1,0 +1,14 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "menu": "Menu",
+    "submenu1": "Sub Menu 1",
+    "submenu2": "Sub Menu 2"
+  },
+  "profile": {
+    "title": "Profile"
+  },
+  "header": {
+    "logout": "Logout"
+  }
+}

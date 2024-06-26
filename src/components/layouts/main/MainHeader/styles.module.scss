@@ -1,0 +1,53 @@
+.header {
+    &:global(.ant-layout-header) {
+        height: 4.25rem;
+        padding: 1rem;
+        color: var(--text-main-color);
+        background: var(--layout-header-bg-color);
+    }
+
+    line-height: 1.5;
+
+    @media only screen and (min-width: _breakpoint(md)) {
+        &:global(.ant-layout-header) {
+            padding: _layout(desktop, padding-vertical) _layout(desktop, padding-horizontal);
+            height: _layout(desktop, header-height);
+        }
+    }
+}
+
+.headerLeft {
+    padding: _layout(desktop, padding-vertical) _layout(desktop, padding-horizontal);
+
+}
+
+.headerActionWrapper {
+    cursor: pointer;
+
+    & > .ant-btn > span[role='img'],
+    .ant-badge {
+        font-size: 1.625rem;
+    }
+
+    & .ant-badge {
+        display: inline-block;
+    }
+}
+
+.mobile {
+    .burger {
+        z-index: 999;
+        display: flex;
+
+        &Icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            margin-right: -0.5rem;
+            color: var(--text-main-color);
+
+            &.cross {
+                color: var(--text-secondary-color);
+            }
+        }
+    }
+}

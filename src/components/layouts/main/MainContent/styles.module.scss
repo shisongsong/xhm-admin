@@ -1,0 +1,11 @@
+.content {
+    padding: _layout(desktop, padding-vertical) _layout(desktop, padding-horizontal);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(md) {
+        padding: _layout(mobile, padding-vertical) _layout(mobile, padding-horizontal);
+    }
+}

@@ -1,0 +1,31 @@
+.plainText {
+    color: _palette(red);
+
+    @include respond(desktop) {
+        color: orange;
+    }
+
+    @include respond(tablet) {
+        color: green;
+    }
+
+    @include respond(lg) {
+        color: blue;
+    }
+
+    @include respond(phone) {
+        color: purple;
+    }
+
+    @include respond(sm) {
+        color: yellow;
+    }
+
+    @include respond(xs) {
+        color: grey;
+    }
+
+    @include respond(big-screen) {
+        color: black;
+    }
+}

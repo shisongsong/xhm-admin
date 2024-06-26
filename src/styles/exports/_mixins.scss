@@ -1,0 +1,57 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-content: center;
+}
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 768px:      Phone
+768 - 1280px:    Tablet
+1280 - 1920px:   Desktop
+1920px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tablet
+- desktop
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: _breakpoint(md)) { @content }    // 768px
+    } @else if $breakpoint == tablet {
+        @media only screen and (max-width: _breakpoint(xl)) { @content }     // 1280px
+    } @else if $breakpoint == desktop {
+        @media only screen and (max-width: _breakpoint(xxl)) { @content }    // 1920px
+    } @else if $breakpoint == big-screen {
+        @media only screen and (min-width: _breakpoint(xxl)) { @content }    // 1800 // this is min-width
+    } @else {
+        @media only screen and (max-width: _breakpoint($breakpoint)) { @content }
+    }
+}

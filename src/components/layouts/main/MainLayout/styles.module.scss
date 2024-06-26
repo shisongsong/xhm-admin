@@ -1,0 +1,13 @@
+.main {
+    height: 100vh;
+
+    .content {
+        @include respond(xl) {
+            margin-left: 80px;
+        }
+
+        @include respond(md) {
+            margin-left: unset;
+        }
+    }
+}
